@@ -1,0 +1,11 @@
+/* line 1, ../scss/style.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 7, ../scss/style.scss */
+body {
+  font-family: Helvetica, sans-serif;
+}
