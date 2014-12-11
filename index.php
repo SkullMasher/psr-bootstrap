@@ -100,7 +100,7 @@
 
             for ($i=0; $i < $db->getCount(); $i++) {
                 $actualite = $db->getResult()[$i];
-                echo '<p>' . $actualite->titre . ' <br> ' . $actualite->description . '</p>';
+                echo '<p>' . escape($actualite->titre) . ' <br> ' . escape($actualite->description) . '</p>';
             }
             
         }?>

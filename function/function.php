@@ -8,3 +8,7 @@ function calculate_string($mathString)
     $compute = create_function("", "return (" . $mathString . ");");
     return 0 + $compute();
 }
+function escape($string)
+{
+    return htmlentities($string, ENT_QUOTES, 'utf-8');
+}
