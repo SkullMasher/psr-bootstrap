@@ -1,9 +1,7 @@
 <?php
 
-	$GLOBALS['mysql'] = array(
-			'db' => 'dbtest',
-			'user' => 'root',
-			'pw' => ''
-		);
-
-?>
+    $GLOBALS['mysql'] = array(
+            'db' => 'dbtest',
+            'user' => 'root',
+            'pw' => ''
+        );

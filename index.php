@@ -2,7 +2,6 @@
     namespace Phplab;
 
     require_once 'init.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,14 +87,23 @@
             }
         }
         ?>
-    <h3>Redirect test</h3>
-    <?php
-        // require_once 'classes/Db.php';
-        Redirect::to('config.php');
-        new Db;
+    <h3>Db wrapper test</h3>
+        <?php $db = Db::getInstance();
+        $db->query('select * from actualite');
+        if ($db->getError()) {
+            echo($db->getError());
+        } else {
+            // echo($db->getCount());
+            echo '<pre>';
+            print_r($db->getFirstResult());
+            echo '</pre>';
 
-
-    ?>
+            for ($i=0; $i < $db->getCount(); $i++) {
+                $actualite = $db->getResult()[$i];
+                echo '<p>' . $actualite->titre . ' <br> ' . $actualite->description . '</p>';
+            }
+            
+        }?>
     </div>
     </div>
 </body>

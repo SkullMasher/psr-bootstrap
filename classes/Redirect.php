@@ -3,6 +3,7 @@
 
     /**
     * Redirect to page
+    * Warning do not put any text before this method otherwise the redirection will not work
     */
 class Redirect
 {
@@ -23,7 +24,7 @@ class Redirect
                 break;
             }
         }
-            header('Location ' . $location);
-            exit();
+        header('Location: ' . $location);
+        exit();
     }
 }

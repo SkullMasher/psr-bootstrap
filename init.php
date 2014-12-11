@@ -1,6 +1,7 @@
 <?php
-
     require_once 'config.php';
+
+    session_start();
 
     /**
      * An example of a project-specific implementation.

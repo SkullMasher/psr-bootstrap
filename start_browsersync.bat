@@ -1,1 +1,1 @@
-browser-sync start --proxy "localhost/phplab" --files "css/*.css, *.php, js/*.js"
+browser-sync start --proxy "localhost/phplab" --files "css/*.css, *.php, classes/*.php, js/*.js"
